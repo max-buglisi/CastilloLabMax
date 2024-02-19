@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+crossorigin=""/>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+crossorigin=""></script>
+
+<style>
+    #mapi {height: 500px;width: 1000px;}
+</style>
+
+<body>
+    <div id="mapi"></div>
+    <script>
+        var map = L.map('mapi').setView([30, -50], 3);
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
+}).addTo(map);
+
+// Define custom icons
+// Function to create circle markers with specified styles
+function createCircleMarker(latlng, radius, fillColor, popupContent) {
+    var marker = L.circleMarker(latlng, {
+        radius: radius,
+        fillColor: fillColor,
+        color: "#000",
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    });
+    marker.bindPopup(popupContent).openPopup();
+    return marker;
+}
+
+// Define circle markers for each location
+var Marker1 = createCircleMarker([42.3505, -71.1054], 14, "#FF0000", "<b>Sarah Davies</b><br><em>Boston University</em><br>Assistant Professor").addTo(map);
+
+var Marker2 = createCircleMarker([42.2554, -72.5729], 11, "#f28f38", "<b>Justin Baumann</b><br><em>Mount Holyoke College</em><br>Assistant Professor").addTo(map);
+var Marker3 = createCircleMarker([38.89289055, -77.03255454], 11, "#f28f38", "<b>John Rippe</b><br><em>NOAA</em><br>Endangered Species Biologist<br><b>Nettie McMiller</b><br><em>U.S. EPA</em><br>Environmental Protection Specialist").addTo(map);
+
+var Marker5 = createCircleMarker([35.7596, -79.0193], 8, "#00FF00", "<b>Risa Dalsing</b><br><em>NC State</em><br>Laboratory Animal Technician").addTo(map);
+var Marker6 = createCircleMarker([25.08804315, -80.44103527], 8, "#00FF00", "<b>Bailey Thomasson</b><br><em>Coral Restoration Foundation</em><br>USVI Reef Restoration Coordinator").addTo(map);
+var Marker7 = createCircleMarker([18.2109, -67.1409], 8, "#00FF00", "<b>Travis Courtney</b><br><em>University of Puerto Rico at Mayagüez</em><br>Marine Scientist <br> <b>Joesph Townsend</b><br><em>University of Puerto Rico at Mayagüez</em><br>PHD Student").addTo(map);
+var Marker8 = createCircleMarker([42.3505, -71.1054], 8, "#00FF00", "<b>Hannah Aichelman</b><br><em>Boston University</em><br>Postdoctoral Associate").addTo(map);
+var Marker9 = createCircleMarker([-33.8837, 151.2006], 8, "#00FF00", "<b>Katheryn Cobleigh</b><br><em>University of Technology Sydney</em><br>PHD Student").addTo(map);
+var Marker10 = createCircleMarker([51.49376858, -0.09901867139], 8, "#00FF00", "<b>Daphne De Leener</b><br><em>NHS England</em><br>Net Zero and Sustainability Manager").addTo(map);
+var Marker11 = createCircleMarker([44.5618, -123.2823], 8, "#00FF00", "<b>Lauren Speare</b><br><em>Oregon State University</em><br>Postdoctoral Fellow").addTo(map);
+var Marker13 = createCircleMarker([38.5382, -121.7617], 8, "#00FF00", "<b>Brooke Benson</b><br><em>UC Davis</em><br>PHD Student").addTo(map);
+var Marker14 = createCircleMarker([42.3259168, -71.09951894], 8, "#00FF00", "<b>Jessica Boulton</b><br><em>Harvard Medical School</em><br>Research Assistant").addTo(map);
+var Marker15 = createCircleMarker([35.82939971, -78.62262798], 8, "#00FF00", "<b>Alyssa Knowlton</b><br><em>Environmental Research & Education Foundation</em><br>Data Analyst/Coordinator").addTo(map);
+var Marker16 = createCircleMarker([38.89289055, -77.03255454], 8, "#00FF00", "<b>Tyler Christian</b><br><em>NOAA</em><br>Research Associate").addTo(map);
+var Marker17 = createCircleMarker([41.52643, -70.676], 8, "#00FF00", "<b>Emma Johnson</b><br><em>University of Chicago MBL</em><br>Research Assistant").addTo(map);
+
+
+    </script>
+    
+</body>
+</html>
