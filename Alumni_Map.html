@@ -14,6 +14,13 @@ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
 crossorigin=""></script>
 
 <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
     #mapi {height: 500px;width: 1000px;}
 </style>
 
@@ -59,6 +66,18 @@ var Marker15 = createCircleMarker([35.82939971, -78.62262798], 8, "#00FF00", "<b
 var Marker16 = createCircleMarker([38.89289055, -77.03255454], 8, "#00FF00", "<b>Tyler Christian</b><br><em>NOAA</em><br>Research Associate").addTo(map);
 var Marker17 = createCircleMarker([41.52643, -70.676], 8, "#00FF00", "<b>Emma Johnson</b><br><em>University of Chicago MBL</em><br>Research Assistant").addTo(map);
 
+var legend = L.control({position: 'topright'});
+
+legend.onAdd = function (map) {
+    var div = L.DomUtil.create('div', 'info legend');
+    div.innerHTML += '<strong>Legend</strong><br>';
+    div.innerHTML += '<i style="background:#00FF00"></i> <span style="color: #00FF00">Post-Docs</span><br>';
+    div.innerHTML += '<i style="background:#f28f38"></i> <span style="color: #f28f38">PhD Students</span><br>';
+    div.innerHTML += '<i style="background:#56a0d3"></i> <span style="color: #56a0d3">Undergrads</span><br>';
+    return div;
+};
+
+legend.addTo(map);
 
     </script>
     
