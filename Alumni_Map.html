@@ -48,32 +48,36 @@ function createCircleMarker(latlng, radius, fillColor, popupContent) {
 }
 
 // Define circle markers for each location
-var Marker1 = createCircleMarker([42.3505, -71.1054], 14, "#FF0000", "<b>Sarah Davies</b><br><em>Boston University</em><br>Assistant Professor").addTo(map);
+var Marker_1 = createCircleMarker([42.3505, -71.1054], 15, "#0000FF", "<b>Sarah Davies</b><br><em>Boston University</em><br>Assistant Professor<br><a href='https://sites.bu.edu/davieslab/'>Website</a>").addTo(map);
 
-var Marker2 = createCircleMarker([42.2554, -72.5729], 11, "#f28f38", "<b>Justin Baumann</b><br><em>Mount Holyoke College</em><br>Assistant Professor").addTo(map);
-var Marker3 = createCircleMarker([38.89289055, -77.03255454], 11, "#f28f38", "<b>John Rippe</b><br><em>NOAA</em><br>Endangered Species Biologist<br><b>Nettie McMiller</b><br><em>U.S. EPA</em><br>Environmental Protection Specialist").addTo(map);
+var MarkerA = createCircleMarker([42.2554, -72.5729], 11, "#CBC3E3", "<b>Justin Baumann</b><br><em>Mount Holyoke College</em><br>Assistant Professor<br><a href='https://jbaumann3.wordpress.com/'>Website</a>").addTo(map);
+var MarkerB = createCircleMarker([38.89289055, -77.03255454], 11, "#CBC3E3", "<b>John Rippe</b><br><em>NOAA</em><br>Endangered Species Biologist<br><b>Anastasia Dulskiy</b><br><em>NOAA</em><br>Knauss Marine Policy Fellow<br><a href='https://adulsk.wixsite.com/anastasiadulskiy'>Website</a>").addTo(map);
+var MarkerC = createCircleMarker([40.194, -75.4563], 11, "#CBC3E3", "<b>Colleen Bove</b><br><em>Ursinus College</em><br>Assistant Professor<br><a href='https://colleenbove.science/'>Website</a>").addTo(map);
 
-var Marker5 = createCircleMarker([35.7596, -79.0193], 8, "#00FF00", "<b>Risa Dalsing</b><br><em>NC State</em><br>Laboratory Animal Technician").addTo(map);
-var Marker6 = createCircleMarker([25.08804315, -80.44103527], 8, "#00FF00", "<b>Bailey Thomasson</b><br><em>Coral Restoration Foundation</em><br>USVI Reef Restoration Coordinator").addTo(map);
-var Marker7 = createCircleMarker([18.2109, -67.1409], 8, "#00FF00", "<b>Travis Courtney</b><br><em>University of Puerto Rico at Mayagüez</em><br>Marine Scientist <br> <b>Joesph Townsend</b><br><em>University of Puerto Rico at Mayagüez</em><br>PHD Student").addTo(map);
-var Marker8 = createCircleMarker([42.3505, -71.1054], 8, "#00FF00", "<b>Hannah Aichelman</b><br><em>Boston University</em><br>Postdoctoral Associate").addTo(map);
-var Marker9 = createCircleMarker([-33.8837, 151.2006], 8, "#00FF00", "<b>Katheryn Cobleigh</b><br><em>University of Technology Sydney</em><br>PHD Student").addTo(map);
-var Marker10 = createCircleMarker([51.49376858, -0.09901867139], 8, "#00FF00", "<b>Daphne De Leener</b><br><em>NHS England</em><br>Net Zero and Sustainability Manager").addTo(map);
-var Marker11 = createCircleMarker([44.5618, -123.2823], 8, "#00FF00", "<b>Lauren Speare</b><br><em>Oregon State University</em><br>Postdoctoral Fellow").addTo(map);
-var Marker13 = createCircleMarker([38.5382, -121.7617], 8, "#00FF00", "<b>Brooke Benson</b><br><em>UC Davis</em><br>PHD Student").addTo(map);
-var Marker14 = createCircleMarker([42.3259168, -71.09951894], 8, "#00FF00", "<b>Jessica Boulton</b><br><em>Harvard Medical School</em><br>Research Assistant").addTo(map);
-var Marker15 = createCircleMarker([35.82939971, -78.62262798], 8, "#00FF00", "<b>Alyssa Knowlton</b><br><em>Environmental Research & Education Foundation</em><br>Data Analyst/Coordinator").addTo(map);
-var Marker16 = createCircleMarker([38.89289055, -77.03255454], 8, "#00FF00", "<b>Tyler Christian</b><br><em>NOAA</em><br>Research Associate").addTo(map);
-var Marker17 = createCircleMarker([41.52643, -70.676], 8, "#00FF00", "<b>Emma Johnson</b><br><em>University of Chicago MBL</em><br>Research Assistant").addTo(map);
+var Marker4 = createCircleMarker([38.89210352, -77.02894517], 7, "#FFFF00", "<b>Nettie McMiller</b><br><em>U.S. EPA</em><br>Environmental Protection Specialist").addTo(map);
+var Marker5 = createCircleMarker([35.7596, -79.0193], 7, "#FFFF00", "<b>Risa Dalsing</b><br><em>NC State</em><br>Laboratory Animal Technician").addTo(map);
+var Marker6 = createCircleMarker([25.08804315, -80.44103527], 7, "#FFFF00", "<b>Bailey Thomasson</b><br><em>Coral Restoration Foundation</em><br>USVI Reef Restoration Coordinator").addTo(map);
+var Marker7 = createCircleMarker([18.2109, -67.1409], 7, "#FFFF00", "<b>Travis Courtney</b><br><em>University of Puerto Rico at Mayagüez</em><br>Marine Scientist <br> <b>Joesph Townsend</b><br><em>University of Puerto Rico at Mayagüez</em><br>PHD Student").addTo(map);
+var Marker8 = createCircleMarker([42.3505, -71.1054], 7, "#FFFF00", "<b>Hannah Aichelman</b><br><em>Boston University</em><br>Postdoctoral Associate").addTo(map);
+var Marker9 = createCircleMarker([-33.8837, 151.2006], 7, "#FFFF00", "<b>Katheryn Cobleigh</b><br><em>University of Technology Sydney</em><br>PHD Student").addTo(map);
+var Marker10 = createCircleMarker([51.49376858, -0.09901867139], 7, "#FFFF00", "<b>Daphne De Leener</b><br><em>NHS England</em><br>Net Zero and Sustainability Manager").addTo(map);
+var Marker11 = createCircleMarker([44.5618, -123.2823], 7, "#FFFF00", "<b>Lauren Speare</b><br><em>Oregon State University</em><br>Postdoctoral Fellow").addTo(map);
+var Marker13 = createCircleMarker([38.5382, -121.7617], 7, "#FFFF00", "<b>Brooke Benson</b><br><em>UC Davis</em><br>PHD Student").addTo(map);
+var Marker14 = createCircleMarker([42.3259168, -71.09951894], 7, "#FFFF00", "<b>Jessica Boulton</b><br><em>Harvard Medical School</em><br>Research Assistant").addTo(map);
+var Marker15 = createCircleMarker([35.82939971, -78.62262798], 7, "#FFFF00", "<b>Alyssa Knowlton</b><br><em>Environmental Research & Education Foundation</em><br>Data Analyst/Coordinator").addTo(map);
+var Marker16 = createCircleMarker([38.89289055, -77.03255454], 7, "#FFFF00", "<b>Tyler Christian</b><br><em>NOAA</em><br>Research Associate").addTo(map);
+var Marker17 = createCircleMarker([41.52643, -70.676], 7, "#FFFF00", "<b>Emma Johnson</b><br><em>University of Chicago MBL</em><br>Research Assistant").addTo(map);
+var Marker18 = createCircleMarker([42.3744, -71.1182], 7, "#FFFF00", "<b>Jared Richards</b><br><em>Harvard University</em><br>Graduate Student").addTo(map);
+
 
 var legend = L.control({position: 'topright'});
 
 legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend');
     div.innerHTML += '<strong>Legend</strong><br>';
-    div.innerHTML += '<i style="background:#00FF00"></i> <span style="color: #00FF00">Post-Docs</span><br>';
-    div.innerHTML += '<i style="background:#f28f38"></i> <span style="color: #f28f38">PhD Students</span><br>';
-    div.innerHTML += '<i style="background:#56a0d3"></i> <span style="color: #56a0d3">Undergrads</span><br>';
+    div.innerHTML += '<i style="background:#00FF00"></i> <span style="color: #0000FF">Post-Docs</span><br>';
+    div.innerHTML += '<i style="background:#f28f38"></i> <span style="color: #CBC3E3">PhD Students</span><br>';
+    div.innerHTML += '<i style="background:#56a0d3"></i> <span style="color: #FFFF00">Undergrads</span><br>';
     return div;
 };
 
